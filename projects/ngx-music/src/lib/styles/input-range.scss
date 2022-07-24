@@ -1,0 +1,27 @@
+input[type="range"] {
+    -webkit-appearance: none;
+    background: transparent;
+    cursor: pointer;
+    height: 4px;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::-webkit-slider-runnable-track,
+    &::-moz-range-track {
+        height: 4px;
+    }
+
+    &::-webkit-slider-thumb,
+    &::-moz-range-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        margin-top: -12px;
+        background-color: #fff;
+        border-radius: 0;
+        border: 0;
+        height: 10px;
+        width: 10px;
+    }
+}

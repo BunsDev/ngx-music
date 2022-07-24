@@ -1,0 +1,29 @@
+@import '../../styles/input-range.scss';
+
+.volume-controller {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .slider {
+        width: 0px;
+        transition: width .2s cubic-bezier(0, .25, .25, 1);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+
+        input {
+            width: 100%;
+        }
+
+        &:hover {
+            width: 100px;
+            visibility: visible;
+        }
+    }
+    
+    &:hover > .slider {
+        width: 100px;
+        visibility: visible;
+    }
+}

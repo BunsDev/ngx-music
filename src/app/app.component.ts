@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'music';
+  title = 'Ngx-music';
+
+  public readonly audioData = {
+    name: 'Liquid Spirit (Claptone remix)',
+    artist: 'Gregory Porter',
+    coverUrl: '../assets/cover.jpg',
+    audioSrc: '../assets/audio.mp3'
+  }
 }

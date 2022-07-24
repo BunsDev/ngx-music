@@ -1,0 +1,29 @@
+<div class="ngx-music-container">
+    <div class="data">
+        <div class="cover">
+            <img [src]="audioData.coverUrl" alt="">
+        </div>
+        <div class="title">
+            <div class="artist">{{ audioData.artist }}</div>
+            <div class="name">{{ audioData.name }}</div>
+        </div>
+    </div>
+
+    <div class="player">
+        <ngx-music-prev-button (onClick)="onPrev()"></ngx-music-prev-button>
+
+        <ngx-music-playback-switch (onPause)="onPause()" (onPlay)="onPlay()"></ngx-music-playback-switch>
+
+        <ngx-music-next-button (onClick)="onNext()"></ngx-music-next-button>
+
+        <ng-container *ngLet="volume$ | async as volume">
+            <ngx-music-volume [volume]="volume" (onVolumeChange)="onVolumeChange($event)"></ngx-music-volume>
+        </ng-container>
+        
+        <ng-container *ngLet="elapsed$ | async as elapsed">
+            <ng-container *ngLet="duration$ | async as duration">
+                <ngx-music-progress [duration]="duration" [elapsed]="elapsed" (onTimeChange)="onTimeChange($event)"></ngx-music-progress>
+            </ng-container>
+        </ng-container>
+    </div>
+</div>

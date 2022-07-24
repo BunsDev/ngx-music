@@ -1,0 +1,56 @@
+@import './styles/input-range.scss';
+
+.ngx-music-container {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background: #000;
+}
+
+.data {
+    display: flex;
+    align-items: center;
+    border-right: 1px solid rgba(255, 255, 255, .2);
+    font-size: 24px;
+
+    .cover {
+        height: 100%;
+        width: 70px;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .title {
+        padding: 10px 20px;
+        width: 250px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 14px;
+        box-sizing: border-box;
+
+        .artist {
+            color: #9b9b9b;
+        }
+
+        .name {
+            color: #fff;
+        }
+    }
+}
+
+.player {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+
+    ngx-music-volume {
+        margin-left: 12px;
+        margin-right: 24px;
+    }
+}

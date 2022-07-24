@@ -1,0 +1,29 @@
+@import '../../styles/input-range.scss';
+
+:host {
+    display: block;
+    width: 100%;
+}
+
+.progress-controller {
+    display: flex;
+    align-items: center;
+
+    .time {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: #fff;
+        margin-right: 16px;
+        white-space: nowrap;
+    }
+
+    .slider {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        input {
+            width: 100%;
+        }
+    }
+}

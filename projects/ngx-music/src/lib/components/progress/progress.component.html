@@ -1,0 +1,15 @@
+<div class="progress-controller">
+  <div class="time">
+      {{ elapsed.parsed }} / {{ duration.parsed }}
+  </div>
+  <div class="slider">
+    <input 
+      type="range" 
+      [min]="0" 
+      [max]="duration.seconds" 
+      [value]="elapsed.seconds" 
+      (change)="handleTimeChange($event)"
+      [style.background]="getRangeGradient(elapsed.seconds)"
+    >
+  </div>
+</div>
